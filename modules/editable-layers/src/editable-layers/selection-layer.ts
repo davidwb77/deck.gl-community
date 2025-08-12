@@ -88,6 +88,7 @@ export class SelectionLayer<DataT, ExtraPropsT> extends CompositeLayer<
   } = undefined!;
 
   _selectRectangleObjects(coordinates: any) {
+    console.log(coordinates);
     const {layerIds, onSelect} = this.props;
     const [x1, y1] = this.context.viewport.project(coordinates[0][0]);
     const [x2, y2] = this.context.viewport.project(coordinates[0][2]);
